@@ -1,4 +1,5 @@
 const dotenv = require("dotenv")
 dotenv.config()
 const app = require("./express")
+const tourModel = require("./models/tourModel")
 app.listen(process.env.PORT, ()=> console.log("server started 👌"))
