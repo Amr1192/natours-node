@@ -35,5 +35,5 @@ const app = express()
 // *: Requiring the router
 
 const tourRouter = require("./routes/tourRouter")
-app.use(tourRouter)
+app.use("/tours",tourRouter)
 module.exports = app

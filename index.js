@@ -1,5 +1,6 @@
 const dotenv = require("dotenv")
 dotenv.config()
 const app = require("./express")
-const tourModel = require("./models/tourModel")
+const mongose = require("mongoose")
+const connection = mongose.connect(process.env.DB_CONNECTION).then(()=>console.log("Database connected successfully 👌")).catch((err)=>console.log(err))
 app.listen(process.env.PORT, ()=> console.log("server started 👌"))
