@@ -26,19 +26,5 @@ app.post('/tours', (req,res) => {
             res.json(tours)
             })
     })
-d
-
-module.exports = app
-const fs = require("fs")
-const tours = JSON.parse(fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`))
-const express = require("express")
-const app = express()
-app.get('/routes',(req,res)=> {
-    res.json(tours)
-})
-
-app.post('/tours', (req,res) => {
-    res.end(tours)
-})
 
 module.exports = app
